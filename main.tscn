@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cv82l4ymuqg11"]
+[gd_scene load_steps=8 format=3 uid="uid://cv82l4ymuqg11"]
 
 [ext_resource type="Texture2D" uid="uid://pec6kmi0pksf" path="res://Green.png" id="1_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://bbpc70kuxccou" path="res://Terrain (16x16).png" id="2_lquwl"]
@@ -213,6 +213,10 @@ texture = ExtResource("2_lquwl")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_5vw27")
 
+[sub_resource type="Curve" id="Curve_1bvp3"]
+_data = [Vector2(0.0106383, 0.988764), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0113567, 0.0, 1, 0]
+point_count = 2
+
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -236,5 +240,6 @@ layer_0/tile_data = PackedInt32Array(524288, 0, 4, 524289, 65536, 4, 524290, 655
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_7mycd")]
 position = Vector2(91, 350)
 script = ExtResource("4_272bh")
+dash_curve = SubResource("Curve_1bvp3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
